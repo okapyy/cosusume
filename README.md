@@ -32,7 +32,7 @@ https://oooooo
 ### usersテーブル
 |Column|Type|Options|
 |------|----|-------|
-|name|string|null: false|
+|nickname|string|null: false|
 |email|string|null: false|
 #### Association
 - has_one :personal
