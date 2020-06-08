@@ -1,0 +1,16 @@
+@mixin login() {
+  text-decoration: none;
+  color: #333;
+  transition: all 0.3s ease 0s;
+}
+
+@mixin hover-opacity($opacity) {
+  &:hover {
+    opacity: $opacity;
+  }
+}
+
+@mixin display-text($size, $color) {
+  font-size: $size;
+  color: $color;
+}
