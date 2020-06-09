@@ -91,6 +91,22 @@
           }
         }
       }
+      .all-btn {
+        text-align: right;
+        &__box {
+          text-decoration: none;
+          color: #777;
+          font-size: 13px;
+          padding: 10px 20px;
+          border: 1px solid #D2B48C;
+          border-radius: 10px;
+          transition: all 0.2s ease 0s;
+          &:hover {
+            background-color: #D2B48C;
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }
