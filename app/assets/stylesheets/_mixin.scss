@@ -14,3 +14,10 @@
   font-size: $size;
   color: $color;
 }
+
+@mixin hover-bgcolor($bg, $color) {
+  &:hover {
+    background-color: $bg;
+    color: $color;
+  }
+}

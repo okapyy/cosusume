@@ -3,5 +3,9 @@ body {
 }
 
 @import 'reset';
+@import 'font-awesome-sprockets';
+@import 'font-awesome';
 @import 'mixin';
+@import 'modules/header';
 @import 'items_index';
+@import 'devise';

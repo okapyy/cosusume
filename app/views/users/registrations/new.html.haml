@@ -1,21 +1,18 @@
-%h2 Sign up
-= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
-  = render "devise/shared/error_messages", resource: resource
-  .field
-    = f.label :email
-    %br/
-    = f.email_field :email, autofocus: true, autocomplete: "email"
-  .field
-    = f.label :password
-    - if @minimum_password_length
-      %em
-        (#{@minimum_password_length} characters minimum)
-    %br/
-    = f.password_field :password, autocomplete: "new-password"
-  .field
-    = f.label :password_confirmation
-    %br/
-    = f.password_field :password_confirmation, autocomplete: "new-password"
-  .actions
-    = f.submit "Sign up"
-= render "users/shared/links"
+= render 'items/header'
+.devise
+  .block
+    .block__title
+      %h2 新規会員登録
+    .block__form
+      = form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f|
+        = render "devise/shared/error_messages", resource: resource
+        .field
+          = f.text_field :nickname, placeholder: "\uf007 ニックネーム", class: "fa"
+        .field
+          = f.email_field :email, autocomplete: "email", placeholder: "\uf0e0 E-Mail", class: "fa"
+        .field
+          = f.password_field :password, autocomplete: "new-password", placeholder: "\uf084 パスワード(８文字以上)", class: "fa"
+        .field
+          = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "\uf084 パスワード(８文字以上)", class: "fa"
+        = f.submit "次へ進む", class: "actions"
+      = render "users/shared/links"
