@@ -47,7 +47,7 @@
         display: block;
         height: 46px;
         width: 200px;
-        margin: 48px auto 30px;
+        margin: 48px auto 39px;
         border: 1px solid #D2B48C;
         border-radius: 10px;
         background-color: #fff;
@@ -55,6 +55,20 @@
         transition: all 0.2s ease 0s;
         cursor: pointer;
         @include hover-bgcolor(#D2B48C,#fff);
+      }
+      .link {
+        p {
+          font-size: 13px;
+          color: #888;
+          text-align: right;
+          a {
+            color: #888;
+            &:hover {
+              text-decoration: none;
+              color: #777;
+            }
+          }
+        }
       }
     }
   }

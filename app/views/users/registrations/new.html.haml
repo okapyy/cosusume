@@ -15,4 +15,7 @@
         .field
           = f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "\uf084 パスワード(８文字以上)", class: "fa"
         = f.submit "次へ進む", class: "actions"
-      = render "users/shared/links"
+      .link
+        %p
+          すでにアカウントをお持ちの方は
+          = link_to "こちら", new_user_session_path, class: "link__btn"

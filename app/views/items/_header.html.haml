@@ -1,10 +1,18 @@
 .header
   .header__top
     .left
-      ≡
+      = link_to root_path do
+        = image_tag "/logo.png", class: "logo"
     .right
-      = link_to new_user_registration_path, class: "new" do
-        新規登録
-      |
-      = link_to new_user_session_path, class: "login" do
-        ログイン
+      - if user_signed_in?
+        = link_to "#", class: "new" do
+          マイページ
+        |
+        = link_to destroy_user_session_path, method: :delete, class: "login" do
+          ログアウト
+      - else
+        = link_to new_user_registration_path, class: "new" do
+          新規登録
+        |
+        = link_to new_user_session_path, class: "login" do
+          ログイン
