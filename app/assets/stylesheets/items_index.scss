@@ -4,11 +4,14 @@
     .row {
       height: 225px;
       background-color: #D2B48C;
+      position: relative;
       &__text {
-        
+        position: absolute;
+        top: 32%;
+        left: 20%;
         p {
-          font-size: 22px;
-          line-height: 30px;
+          font-size: 27px;
+          line-height: 47px;
           color: #fff;
         }
       }
@@ -17,11 +20,11 @@
       width: calc( 100% - 200px );
       margin: 80px auto;
       .new-arrive {
-        width: 90%;
+        width: 70%;
         margin: 0 auto;
         .subtitle {
           height: 50px;
-          width: 65%;
+          width: 55%;
           margin: 0 auto;
           text-align: center;
           line-height: 50px;
