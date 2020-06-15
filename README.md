@@ -41,11 +41,12 @@ https://oooooo
 ### personalsテーブル
 |Column|Type|Options|
 |------|----|-------|
+|user_id|references|foreign_key: true|
 |age|string|null: false|
 |skin_color|string|null: false|
 |skin_condition|string|null: false|
 #### Association
-- belongs_to :user
+- belongs_to :user, optional: true
 
 ### itemsテーブル
 |Column|Type|Options|
