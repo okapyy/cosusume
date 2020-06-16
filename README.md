@@ -54,17 +54,18 @@ https://oooooo
 |name|string|null: false|
 |brand|string|null: false|
 |detail|text||
-|color|string||
-|condition|string||
+|age|string||
+|skin_color|string||
+|skin_condition|string||
 |user_id|references|null: false, foreign_key: true|
 #### Association
 - belongs_to :user
-- has_many :images
+- has_many :item_images
 
 ### item_imagesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|image|text|null: false|
+|image|text||
 |items_id|references|null: false, foreign_key :true|
 #### Association
-- belong_to :item
+- belongs_to :item

@@ -21,3 +21,12 @@
     color: $color;
   }
 }
+
+@mixin action-btn($num) {
+  display: block;
+  border: 1px solid #D2B48C;
+  border-radius: 10px;
+  background-color: #fff;
+  transition: all $num ease 0s;
+  cursor: pointer;
+}

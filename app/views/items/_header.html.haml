@@ -5,6 +5,9 @@
         = image_tag "/logo.png", class: "logo"
     .right
       - if user_signed_in?
+        = link_to new_item_path, class: "new" do
+          投稿する
+        |
         = link_to "#", class: "new" do
           マイページ
         |

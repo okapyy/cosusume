@@ -49,16 +49,11 @@
         margin-top: 30px;
       }
       .actions {
-        display: block;
+        @include action-btn(0.2s);
         height: 46px;
         width: 200px;
         margin: 48px auto 39px;
-        border: 1px solid #D2B48C;
-        border-radius: 10px;
-        background-color: #fff;
         color: #444;
-        transition: all 0.2s ease 0s;
-        cursor: pointer;
         @include hover-bgcolor(#D2B48C,#fff);
       }
       .link {
