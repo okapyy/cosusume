@@ -10,116 +10,19 @@
         .subtitle
           %h1 新着コスメ
         .groups
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
-          .group
-            %label
-              = link_to "#", class: "group__box" do
-                .group__box__image
-                  = image_tag '/cosme.jpeg', width: "150px", height: "100px", class: "group__box__image--display"
-                .group__box__brand
-                  romand
-                .group__box__name
-                  ジューシーラスティングティント
-                .group__box__evaluation
-                  おすすめ度 ★5.0
+          - @items.each do |item|
+            .group
+              %label
+                = link_to "#", class: "group__box" do
+                  .group__box__image
+                    = image_tag "#{item.item_images.image}", width: "150px", height: "100px", class: "group__box__image--display"
+                  .group__box__brand
+                    = item.brand
+                  .group__box__name
+                    = item.name
+                  .group__box__evaluation
+                    おすすめ度 ★5.0
         .all-btn
-          = link_to "#", class: "all-btn__box" do
-            新着コスメ一覧をみる
+          - if @items.present?
+            = link_to "#", class: "all-btn__box" do
+              新着コスメ一覧をみる
