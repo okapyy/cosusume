@@ -4,6 +4,7 @@ class CreateItems < ActiveRecord::Migration[5.2]
       t.string :name,     null: false
       t.string :brand,    null: false
       t.text :detail
+      t.string :evaluation
       t.string :age
       t.string :skin_color
       t.string :skin_condition

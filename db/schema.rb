@@ -24,6 +24,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_122359) do
     t.string "name", null: false
     t.string "brand", null: false
     t.text "detail"
+    t.string "evaluation"
     t.string "age"
     t.string "skin_color"
     t.string "skin_condition"
