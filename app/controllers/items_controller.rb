@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
   def index
-    @items = Item.includes(:user).order("created_at DESC").limit(10)
+    @items = Item.includes(:user, :item_images).order("created_at DESC").limit(10)
   end
   
   def new
