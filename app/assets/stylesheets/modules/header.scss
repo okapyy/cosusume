@@ -29,12 +29,58 @@
       font-size: 14px;
       .new {
         margin-right: 9px;
-        @include login();
+        @include login(#333);
         @include hover-opacity(0.7);
       }
       .login {
         margin-left: 9px;
-        @include login();
+        @include login(#333);
+        @include hover-opacity(0.7);
+      }
+      .user {
+        margin-right: 19px;
+        @include login(#333);
+        font-size: 13px;
+        &__icon  {
+          font-size: 16px;
+          position: relative;
+        }
+        &__pulldown {
+          position: absolute;
+          top: 47px;
+          height: 81px;
+          width: 120px;
+          background-color: #fff;
+          border: 1px solid #999;
+          padding: 5px 9px;
+          display: none;
+          &__mypage {
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            border-bottom: 1px solid #777;
+            a {
+              text-decoration: none;
+              color: #777;
+            }
+          }
+          &__logout {
+            height: 40px;
+            text-align: center;
+            line-height: 40px;
+            a {
+              text-decoration: none;
+              color: #777;
+            }
+          }
+        }
+      }
+      .post {
+        @include login(#fff);
+        padding: 9px 6px;
+        border: 1px solid #D2B48C;
+        border-radius: 9px;
+        background-color: #D2B48C;
         @include hover-opacity(0.7);
       }
     }

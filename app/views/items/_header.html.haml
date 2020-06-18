@@ -5,15 +5,19 @@
         = image_tag "/logo.png", class: "logo"
     .right
       - if user_signed_in?
-        = link_to new_item_path, class: "new" do
-          = icon('fas','pen', class: 'new__icon')
+        %label{class: 'user', id: 'user-name'}
+          = icon('fas', 'user-alt',class: 'user__icon')
+          = current_user.nickname
+          .user__pulldown#pulldown
+            .user__pulldown__mypage
+              = link_to user_path(current_user.id) do
+                マイページ
+            .user__pulldown__logout
+              = link_to destroy_user_session_path, method: :delete do
+                ログアウト
+        = link_to new_item_path, class: "post" do
+          = icon('fas','pen', class: 'post__icon')
           投稿する
-        |
-        = link_to "#", class: "new" do
-          マイページ
-        |
-        = link_to destroy_user_session_path, method: :delete, class: "login" do
-          ログアウト
       - else
         = link_to new_user_registration_path, class: "new" do
           新規登録
