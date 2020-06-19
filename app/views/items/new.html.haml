@@ -10,7 +10,10 @@
           = i.label '画像を追加'
           %br
           .container
-            = i.file_field :image, class: 'file'
+            %label
+              = icon('fas','camera', class: 'container__icon')
+              = i.file_field :image, class: 'file', id: 'image-file', name: "item[item_images_attributes][][image]"
+            #image-prev
       .field
         = f.label '商品名'
         %br
