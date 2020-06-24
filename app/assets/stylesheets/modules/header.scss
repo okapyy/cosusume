@@ -41,6 +41,7 @@
         margin-right: 19px;
         @include login(#333);
         font-size: 13px;
+        cursor: pointer;
         &__icon  {
           font-size: 16px;
           position: relative;

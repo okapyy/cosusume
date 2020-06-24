@@ -1,0 +1,26 @@
+= render 'items/header'
+.mypage
+  .mypage__box
+    .user-info
+      .left
+        = image_tag '/cosme-icon.png', class: 'left__icon'
+        %p
+          = current_user.nickname
+      .right
+        = link_to "#", class: 'edit' do
+          編集
+    .post-info
+      .my-post
+        .my-post__title
+          %p おすすめしたコスメ
+        .my-post__list
+          - @items.each do |item|
+            .list-one
+              .list-one__image
+                = image_tag item.item_images.first.image.to_s, width: "240px", height: "132px"
+              .list-one__brand
+                = item.brand
+              .list-one__name
+                = item.name
+              .list-one__detail
+                = truncate(item.detail, length: 50)
