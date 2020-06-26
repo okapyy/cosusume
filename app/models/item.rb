@@ -3,5 +3,5 @@ class Item < ApplicationRecord
   has_many :item_images
   accepts_nested_attributes_for :item_images
 
-  validates :evaluation, numericality: { only_integer: true, less_than: 5.1}
+  validates :evaluation, numericality: {less_than_or_equal_to: 5.0}
 end
