@@ -70,6 +70,34 @@
           }
         }
       }
+      .btn {
+        text-align: right;
+        &__delete {
+          background-color: #fff;
+          color: #555;
+          border: none;
+          text-decoration: underline;
+          cursor: pointer;
+          transition: all 0.3s ease 0s;
+          @include hover-opacity(0.7);
+        }
+      }
+    }
+    &__row {
+      .back {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        &--icon {
+          font-size: 26px;
+          color: #D2B48C;
+          margin-right: 8px;
+        }
+        p {
+          font-size: 13px;
+          color: #D2B48C;
+        }
+      }
     }
   }
 }
