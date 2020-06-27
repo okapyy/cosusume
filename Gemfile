@@ -72,3 +72,4 @@ gem 'mini_magick'
 gem 'jquery-rails'
 
 gem 'kaminari'
+gem 'gemoji'

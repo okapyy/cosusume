@@ -26,6 +26,6 @@
                     .list-one__link__box__text
                       = truncate(item.name, length: 17)
                     .list-one__link__box__detail
-                      = truncate(item.detail, length: 50)
+                      = truncate(emojify(item.detail), length: 50)
         .my-post__page
           = paginate @items
