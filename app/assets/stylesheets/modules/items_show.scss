@@ -1,0 +1,61 @@
+.show-body {
+  width: 100vw;
+  .show-main {
+    width: 50%;
+    margin: 0 auto;
+    &__image {
+      width: 509px;
+      margin: 0 auto;
+      .big-image {
+        margin-top: 60px;
+      }
+      .small-image {
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &__contents {
+      width: 509px;
+      margin: 28px auto;
+      .product {
+        &__name {
+          font-size: 16px;
+        }
+        &__brand {
+          font-size: 14px;
+          margin-top: 10px;
+        }
+        &__evaluation {
+          font-size: 13px;
+          text-align: right;
+        }
+        &__detail {
+          font-size: 14px;
+          margin-top: 10px;
+          padding-bottom: 18px;
+          border-bottom: 1px solid #777;
+        }
+      }
+      .user-info {
+        padding: 10px;
+        color: #555;
+        &__box {
+          font-size: 12px;
+          display: flex;
+          &__age {
+            margin-right: 8px;
+          }
+          &__skin-color {
+            margin: 0 8px;
+          }
+          &__skin-condition {
+            margin-left: 8px;
+          }
+        }
+        &__nickname {
+          text-align: right;
+        }
+      }
+    }
+  }
+}
