@@ -3,31 +3,30 @@
   .show-main
     .show-main__image
       .big-image
-        = image_tag '/cosme.jpeg', class: 'big'
+        = image_tag @item.item_images.first.image.to_s, class: 'big'
       .small-image
-        = image_tag '/cosme.jpeg', width: "125px", height: "85px", class: 'small'
-        = image_tag '/cosme.jpeg', width: "125px", height: "85px", class: 'small'
-        = image_tag '/cosme.jpeg', width: "125px", height: "85px", class: 'small'
-        = image_tag '/cosme.jpeg', width: "125px", height: "85px", class: 'small'
+        - @item.item_images.each do |image|
+          = image_tag image.image.url, class: 'small'
     .show-main__contents
       .product
         .product__name
-          ジューシーラスティングティント
+          = @item.name
         .product__brand
-          ロムアンド
+          = @item.brand
         .product__evaluation
-          おすすめ度 ★5.0
+          おすすめ度 ★
+          = @item.evaluation
         .product__detail
-          韓国コスメブランドのロムアンドのティントです！
+          = simple_format @item.detail
       .user-info
         .user-info__box
           .user-info__box__age
-            20代前半
+            = @item.age
           \/
           .user-info__box__skin-color
-            ブルベ
+            = @item.skin_color
           \/
           .user-info__box__skin-condition
-            乾燥肌
+            = @item.skin_condition
         .user-info__nickname
-          チミまろ
+          = @item.user.nickname

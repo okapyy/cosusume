@@ -13,7 +13,7 @@
           - @items.each do |item|
             .group
               %label
-                = link_to item_path, class: "group__box" do
+                = link_to item_path(item.id), class: "group__box" do
                   .group__box__image
                     = image_tag item.item_images.first.image.to_s, width: "150px", height: "100px", class: "group__box__image--display"
                   .group__box__brand
