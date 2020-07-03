@@ -28,5 +28,10 @@
           \/
           .user-info__box__skin-condition
             = @item.skin_condition
+          .user-info__box__links
+            = link_to edit_item_path, class: "edit" do
+              編集する
+            = link_to item_path, method: :delete, class: "delete" do
+              削除する
         .user-info__nickname
           = @item.user.nickname

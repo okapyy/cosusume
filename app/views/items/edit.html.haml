@@ -1,0 +1,45 @@
+= render 'header'
+.new-body
+  .new-body__title
+    .title-box
+      %h1 おすすめを編集
+  .new-body__form
+    = form_for @item do |f|
+      .image-box
+        = f.fields_for :item_images do |i|
+          = i.label '画像を追加'
+          %br
+          .container
+            %label
+              = icon('fas','camera', class: 'container__icon')
+              = i.file_field :image, class: 'file', id: 'image-file', name: "item[item_images_attributes][][image]"
+            #image-prev
+      .field
+        = f.label '商品名'
+        %br
+        = f.text_field :name, placeholder: "ENCHANTING BODY CREAM", class: 'input'
+      .field
+        = f.label 'ブランド名'
+        %br
+        = f.text_field :brand, placeholder: "CHRISTINA", class: 'input'
+      .field
+        = f.label '詳細'
+        %br
+        = f.text_area :detail, placeholder: "MUSEシリーズのボディクリームです\r\nクリニック専売品ですが、塗ったあともサラサラで\r\nしっかり保湿される感じがします。", class: 'input__area'
+      .field
+        = f.label 'おすすめ度'
+        %br
+        = f.text_field :evaluation, placeholder: "0〜5.0の数値を入力してください", class: 'input'
+      .field
+        = f.label '年齢'
+        %br
+        = f.select(:age, [["10代前半","10代前半"],["10代後半","10代後半"],["20代前半","20代前半"],["20代後半","20代後半"],["30代前半","30代前半"],["30代後半","30代後半"],["40代前半","40代前半"],["40代後半","40代後半"],["50代前半","50代前半"],["50代後半","50代後半"],["60代前半","60代前半"],["60代後半","60代後半"],["70代前半","70代前半"],["70代後半","70代後半"]],{ selected: current_user.personal.age},{ class: 'input' })
+      .field
+        = f.label 'パーソナルカラー'
+        %br
+        = f.select(:skin_color, [["イエベ春","イエベ春"],["ブルベ夏","ブルベ夏"],["イエベ秋","イエベ秋"],["ブルベ冬","ブルベ冬"],["イエベ","イエベ"],["ブルベ","ブルベ"]], { selected: current_user.personal.skin_color}, { class: 'input' })
+      .field
+        = f.label '肌質'
+        %br
+        = f.select(:skin_condition, [["乾燥肌","乾燥肌"],["普通肌","普通肌"],["脂性肌","脂性肌"],["混合肌","混合肌"],["敏感肌","敏感肌"]], {selected: current_user.personal.skin_condition}, { class: 'input' })
+      = f.submit '更新する', class: "action"
