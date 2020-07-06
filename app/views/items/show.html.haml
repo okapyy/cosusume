@@ -18,6 +18,13 @@
           = @item.evaluation
         .product__detail
           = simple_format @item.detail
+        - if user_signed_in? && current_user.id == @item.user.id
+          .product__links
+            = link_to edit_item_path, class: "link" do
+              = icon('fas', 'edit')
+            \/
+            = link_to item_path(@item), method: :delete, class: "link" do
+              = icon('fas', 'trash-alt')
       .user-info
         .user-info__box
           .user-info__box__age
@@ -28,10 +35,5 @@
           \/
           .user-info__box__skin-condition
             = @item.skin_condition
-          .user-info__box__links
-            = link_to edit_item_path, class: "edit" do
-              編集する
-            = link_to item_path, method: :delete, class: "delete" do
-              削除する
         .user-info__nickname
           = @item.user.nickname

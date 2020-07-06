@@ -48,6 +48,15 @@
           padding-bottom: 18px;
           border-bottom: 1px solid #777;
         }
+        &__links {
+          text-align: right;
+          font-size: 17px;
+          margin: 10px 0;
+          .link {
+            @include login(#777);
+            @include hover-opacity(0.7);
+          }
+        }
       }
       .user-info {
         padding: 10px;
