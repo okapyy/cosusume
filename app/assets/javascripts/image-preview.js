@@ -39,20 +39,4 @@ $(function() {
     imageDelete.remove();
     fileSet.files = data.files
     })
-  // $('.image-delete__btn').on("click", function() {
-  //   var imageDelete = $(this).parent().parent();
-  //   var dataDelete = $(imageDelete).data('id');
-  //   var dataName = $(imageDelete).data('name');
-  //   if(fileSet.files.length==1){$('input[type=file]').val(null)
-  //     data.clearData();
-  //   } else{$.each(fileSet.files, function(i,input){
-  //     if(input.name == dataName){
-  //       data.items.remove(dataDelete -1)
-  //     }
-  //   })
-  //   $(".container__icon").show();
-  // }
-  //   imageDelete.remove();
-  //   fileSet.files = data.files
-  // });
 })

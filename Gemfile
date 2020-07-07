@@ -73,3 +73,5 @@ gem 'jquery-rails'
 
 gem 'kaminari'
 gem 'gemoji'
+
+gem 'gon'

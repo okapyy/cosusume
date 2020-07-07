@@ -6,7 +6,7 @@
   .new-body__form
     = form_for @item do |f|
       .image-box
-        = f.fields_for :item_images do |i|
+        = f.fields_for :item_images, @item.item_images.first do |i|
           = i.label '画像を追加'
           %br
           .container
