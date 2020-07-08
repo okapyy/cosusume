@@ -13,7 +13,9 @@
             %label
               = icon('fas','camera', class: 'container__icon')
               = i.file_field :image, class: 'file', id: 'image-file', name: "item[item_images_attributes][][image]"
+              = i.hidden_field :id, value: i.object.id
             #image-prev
+              = image_tag(i.object.image.url)
       .field
         = f.label '商品名'
         %br

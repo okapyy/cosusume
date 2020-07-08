@@ -75,3 +75,4 @@ gem 'kaminari'
 gem 'gemoji'
 
 gem 'gon'
+gem 'pry-rails'

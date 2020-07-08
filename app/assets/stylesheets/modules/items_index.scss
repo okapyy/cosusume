@@ -51,6 +51,9 @@
                 margin-bottom: 7px;
                 &--display {
                   border-radius: 10px;
+                  width: 150px;
+                  height: 100px;
+                  object-fit: contain;
                 }
               }
               &__brand {
