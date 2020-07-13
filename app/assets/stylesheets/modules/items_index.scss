@@ -23,14 +23,7 @@
         width: 70%;
         margin: 0 auto;
         .subtitle {
-          height: 50px;
-          width: 55%;
-          margin: 0 auto;
-          text-align: center;
-          line-height: 50px;
-          font-size: 19px;
-          border-top: 1px solid #D2B48C;
-          border-bottom: 1px solid #D2B48C;
+          @include index-subtitle();
         }
         .groups {
           margin: 40px 0;
@@ -81,6 +74,32 @@
             border-radius: 10px;
             transition: all 0.2s ease 0s;
             @include hover-bgcolor(#D2B48C, #fff);
+          }
+        }
+      }
+      .all-genre {
+        width: 66%;
+        margin: 60px auto;
+        .subtitle {
+          @include index-subtitle();
+        }
+        .groups {
+          margin-top: 40px;
+          display: flex;
+          flex-wrap: wrap;
+          .group {
+            margin: 25px;
+            &__link {
+              @include login(#555);
+              padding: 18px;
+              border: 1px solid #888;
+              border-radius: 10px;
+              &:hover {
+                background-color: #D2B48C;
+                color: #fff;
+                border: 1px solid #D2B48C;
+              }
+            }
           }
         }
       }

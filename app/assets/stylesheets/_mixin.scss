@@ -30,3 +30,14 @@
   transition: all $num ease 0s;
   cursor: pointer;
 }
+
+@mixin index-subtitle(){
+  height: 50px;
+  width: 55%;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 50px;
+  font-size: 19px;
+  border-top: 1px solid #D2B48C;
+  border-bottom: 1px solid #D2B48C;
+}
