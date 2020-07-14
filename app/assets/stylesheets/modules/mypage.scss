@@ -64,9 +64,11 @@
               text-decoration: none;
               &__image {
                 width: 240px;
+                height: 132px;
                 margin: 0 auto;
                 &__photo {
                   border-radius: 10px;
+                  object-fit: contain;
                 }
               }
               &__box {
