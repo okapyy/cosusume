@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
   end
 
   def newitem
-    @items = Item.includes(:user).order("created_at DESC")
+    @items = Item.includes(:user).order("created_at DESC").page(params[:page]).per(25)
   end
 
   private
