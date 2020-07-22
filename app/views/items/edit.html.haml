@@ -13,7 +13,7 @@
             %label
               = icon('fas','camera', class: 'container__icon')
               = i.file_field :image, class: 'file', id: 'image-file', name: "item[item_images_attributes][][image]"
-              = i.hidden_field :id, value: i.object.id
+              = i.check_box :_destroy, class: 'hidden-checkbox'
             #image-prev
               - @item.item_images.each do |item|
                 = image_tag item.image.url, width: "120px", height: "100px"
