@@ -3,10 +3,10 @@
   .show-main
     .show-main__image
       .big-image
-        = image_tag @item.item_images.first.image.to_s, class: 'big', id: 'bigimage'
+        = image_tag @item.item_images.first.image.to_s, class: 'big', id: 'bigPic'
       .small-image
         - @item.item_images.each do |image|
-          = image_tag image.image.url, class: 'small', id: 'smallimage'
+          = image_tag image.image.url, class: 'small', id: 'thumb'
     .show-main__contents
       .product
         .product__name
