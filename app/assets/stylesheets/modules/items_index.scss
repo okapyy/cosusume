@@ -90,17 +90,26 @@
           margin-top: 40px;
           display: flex;
           flex-wrap: wrap;
+          justify-content: space-between;
+          color: #333;
           .group {
-            margin: 25px;
-            &__link {
-              @include login(#555);
-              padding: 18px;
-              border: 1px solid #888;
-              border-radius: 10px;
-              &:hover {
-                background-color: #D2B48C;
-                color: #fff;
-                border: 1px solid #D2B48C;
+            &__title {
+              font-size: 20px;
+              padding: 0 30px 2px 5px;
+              background: linear-gradient(transparent 75%, #D2B48C 75%);
+            }
+            &__box {
+              margin-top: 10px;
+              padding-left: 4px;
+              &__one {
+                border-bottom: 1px solid #DDDDDD;
+                .link {
+                  height: 50px;
+                  line-height: 50px;
+                  @include login(#555);
+                  font-size: 14px;
+                  @include hover-opacity(0.7);
+                }
               }
             }
           }
