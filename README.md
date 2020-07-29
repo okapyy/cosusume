@@ -57,6 +57,7 @@ https://oooooo
 |age|string||
 |skin_color|string||
 |skin_condition|string||
+|category|string|null: false|
 |user_id|references|null: false, foreign_key: true|
 #### Association
 - belongs_to :user
