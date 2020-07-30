@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 2020_06_15_122359) do
     t.string "age"
     t.string "skin_color"
     t.string "skin_condition"
+    t.string "category", null: false
     t.bigint "user_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
