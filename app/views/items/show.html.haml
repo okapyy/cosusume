@@ -18,6 +18,9 @@
           = @item.evaluation
         .product__detail
           = simple_format @item.detail
+        .product__category
+          \#
+          = @item.category
         - if user_signed_in? && current_user.id == @item.user.id
           .product__links
             = link_to edit_item_path, class: "link" do
