@@ -38,6 +38,9 @@ class ItemsController < ApplicationController
     @items = Item.includes(:user).order("created_at DESC").page(params[:page]).per(25)
   end
 
+  def category
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :brand, :detail, :category, :evaluation, :age, :skin_color, :skin_condition, item_images_attributes: [:image]).merge(user_id: current_user.id)

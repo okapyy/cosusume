@@ -9,6 +9,7 @@ Rails.application.routes.draw do
   root to: 'items#index'
   resources :items
   get 'newitems', to: 'items#newitem'
+  get 'category', to: 'items#category'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
