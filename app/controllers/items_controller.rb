@@ -38,7 +38,8 @@ class ItemsController < ApplicationController
     @items = Item.includes(:user).order("created_at DESC").page(params[:page]).per(25)
   end
 
-  def category
+  def makeupbase
+    @items = Item.where(category: "化粧下地").page(params[:page]).order("created_at DESC").per(25)
   end
 
   private
