@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   get 'makeupbase', to: 'items#makeupbase'
   get 'concealer' , to: 'items#concealer'
   get 'facepowder', to: 'items#facepowder'
+  get 'foundation', to: 'items#foundation'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
