@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   get 'facepowder', to: 'items#facepowder'
   get 'foundation', to: 'items#foundation'
   get 'highlight_shading', to: 'items#highlight_shading'
+  get 'cheek', to: 'items#cheek'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
