@@ -66,6 +66,10 @@ class ItemsController < ApplicationController
     @items = Item.where(category: 'アイシャドウ').page(params[:page]).oeder("created_at DESC").per(25)
   end
 
+  def eyeliner
+    @items = Item.where(category: 'アイライナー').page(params[:page]).order("created_at DESC").per(25)
+  end
+
   private
   def item_params
     params.require(:item).permit(:name, :brand, :detail, :category, :evaluation, :age, :skin_color, :skin_condition, item_images_attributes: [:image]).merge(user_id: current_user.id)

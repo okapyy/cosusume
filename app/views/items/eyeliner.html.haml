@@ -1,0 +1,23 @@
+= render 'header'
+.index-body
+  .main
+    .container
+      .new-arrive
+        .subtitle
+          %h1 アイライナー一覧
+        .groups
+          - @items.each do |item|
+            .group
+              %label
+                = link_to item_path(item.id), class: "group__box" do
+                  .group__box__image
+                    = image_tag item.item_images.first.image.to_s, class: "group__box__image--display"
+                  .group__box__brand
+                    = item.brand
+                  .group__box__name
+                    = item.name
+                  .group__box__evaluation
+                    おすすめ度 ★
+                    = item.evaluation
+        .page
+          = paginate @items

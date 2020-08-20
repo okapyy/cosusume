@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'highlight_shading', to: 'items#highlight_shading'
   get 'cheek', to: 'items#cheek'
   get 'eye_shadow', to: 'items#eye_shadow'
+  get 'eyeliner', to: 'items#eyeliner'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
