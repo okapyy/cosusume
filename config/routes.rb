@@ -18,6 +18,7 @@ Rails.application.routes.draw do
   get 'eye_shadow', to: 'items#eye_shadow'
   get 'eyeliner', to: 'items#eyeliner'
   get 'mascara', to: 'items#mascara'
+  get 'eyebrow', to: 'items#eyebrow'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
