@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   get 'eyebrow', to: 'items#eyebrow'
   get 'lipstick', to: 'items#lipstick'
   get 'lipcare_cream', to: 'items#lipcare_cream'
+  get 'lipgloss', to: 'items#lipgloss'
   resources :users
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
