@@ -10,14 +10,7 @@ $(function() {
       fileReader.readAsDataURL(file);
       fileReader.onload = function() {
         var image = fileReader.result
-        var html = `<div class="image-top" data-id = "${data.files.length}" data-name = "${file.name}">
-                      <div class="image-content">
-                        <img src=${image} width="120" height="100">
-                      </div>
-                      <div class="image-delete">
-                        <div class="image-delete__btn">× 削除</div>
-                      </div>
-                    </div>`
+        var html = `<div class="image-top" data-id = "${data.files.length}" data-name = "${file.name}"><div class="image-content"><img src=${image} width="120" height="100"></div><div class="image-delete"><div class="image-delete__btn">× 削除</div></div></div>`
         $('#image-prev').append(html);
       }
     });
